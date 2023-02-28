@@ -1,22 +1,26 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import AddNewAccount from './Components/AddNewAccount';
 import './App.css';
+import AccountList from './Components/AccountList';
 
 function App() {
+
+  const [account, setAccount] = useState([]);
+
+  const accountHandler = (name, lastName) => {
+
+    setAccount((prevState) => [...prevState, { name, lastName, id: Math.random(), sum: 0 }])
+  }
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+
+        <AddNewAccount addAccount={accountHandler} />
+
+        <AccountList accounts={account} setAccount={setAccount} />
+
+
       </header>
     </div>
   );
