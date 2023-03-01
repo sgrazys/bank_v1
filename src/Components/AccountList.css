@@ -1,0 +1,30 @@
+.account-list-container {
+	margin-top: 0.5rem;
+	border-radius: 5px;
+	width: 70%;
+}
+
+.filter-container {
+	display: flex;
+	justify-content: flex-end;
+	width: 70%;
+}
+.filter {
+	border: 1px solid #ffffff;
+	border-radius: 5px;
+	font-size: 6px;
+	padding: 5px 4px;
+	margin-top: 0.5rem;
+}
+
+.filter > label {
+	font-size: 16px;
+	margin-right: 15px;
+}
+
+.list-container {
+	border: 1px solid #ffffff;
+	border-radius: 4px;
+	margin-top: 5px;
+	background-color: #293a80;
+}

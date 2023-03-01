@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './AddNewAccount.css';
 
 function AddNewAccount({ addAccount }) {
 	const [name, setName] = useState('');
@@ -18,15 +19,38 @@ function AddNewAccount({ addAccount }) {
 	};
 
 	return (
-		<form onSubmit={dataHandler}>
-			<label htmlFor='name'>Name</label>
-			<input type='text' name='name' id='name' onChange={nameHandler} />
+		<div className='container'>
+			<h2>Create account</h2>
+			<form className='form' onSubmit={dataHandler}>
+				<div className='form-field'>
+					<label htmlFor='name'>Name:</label>
+					<input
+						className='name-input'
+						placeholder='Enter your name'
+						type='text'
+						name='name'
+						id='name'
+						onChange={nameHandler}
+					/>
+				</div>
+				<div className='form-field'>
+					<label htmlFor='lastName'>Surname:</label>
+					<input
+						className='last-name-input'
+						type='text'
+						id='lastName'
+						placeholder='Enter your surname'
+						onChange={lastNameHandler}
+					/>
+				</div>
 
-			<label htmlFor='lastName'>Last name</label>
-			<input type='text' id='lastName' onChange={lastNameHandler} />
-
-			<button type='submit'>Add Account</button>
-		</form>
+				<div className='btn-container'>
+					<button className='btn' type='submit'>
+						Add Account
+					</button>
+				</div>
+			</form>
+		</div>
 	);
 }
 
