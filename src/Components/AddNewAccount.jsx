@@ -16,6 +16,9 @@ function AddNewAccount({ addAccount }) {
 	const dataHandler = (event) => {
 		event.preventDefault();
 		addAccount(name, lastName);
+
+		setName('');
+		setLastname('');
 	};
 
 	return (
@@ -30,6 +33,7 @@ function AddNewAccount({ addAccount }) {
 						type='text'
 						name='name'
 						id='name'
+						value={name}
 						onChange={nameHandler}
 					/>
 				</div>
@@ -40,6 +44,7 @@ function AddNewAccount({ addAccount }) {
 						type='text'
 						id='lastName'
 						placeholder='Enter your surname'
+						value={lastName}
 						onChange={lastNameHandler}
 					/>
 				</div>

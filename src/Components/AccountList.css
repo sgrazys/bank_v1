@@ -9,6 +9,7 @@
 	justify-content: flex-end;
 	width: 70%;
 }
+
 .filter {
 	border: 1px solid #ffffff;
 	border-radius: 5px;
@@ -25,6 +26,90 @@
 .list-container {
 	border: 1px solid #ffffff;
 	border-radius: 4px;
-	margin-top: 5px;
+	margin: 10px 0;
 	background-color: #293a80;
+}
+
+.list-container > .list-items {
+	display: flex;
+	justify-content: flex-start;
+	gap: 10px;
+}
+
+.list-container > .list-items > .item {
+	color: #ffffff;
+	list-style: none;
+	font-size: 20px;
+}
+
+.list-container > .list-items > .surname,
+.list-container > .list-items > .name {
+	font-size: 30px;
+}
+
+.list-container > .list-items > .total {
+	font-size: 20px;
+	line-height: 40px;
+	margin-left: 50px;
+}
+
+.money-operations {
+	display: flex;
+	gap: 10px;
+	margin-left: 40px;
+}
+
+.money-input {
+	width: 20%;
+	height: 18px;
+}
+
+.money-operations > .btn {
+	padding: 0.35em 1.2em;
+	border: none;
+	background-color: #537ec5;
+	border-radius: 0.5em;
+	box-sizing: border-box;
+	text-decoration: none;
+	font-weight: 300;
+	color: #ffffff;
+	text-align: center;
+	transition: all 0.2s;
+	cursor: pointer;
+}
+.money-operations > .btn:hover {
+	color: #ffffff;
+	background-color: #010038;
+}
+
+.money-operations > .withdraw {
+	padding: 0.35em 1.2em;
+	border: none;
+	background-color: #6381b2;
+	border-radius: 0.5em;
+	box-sizing: border-box;
+	text-decoration: none;
+	font-weight: 300;
+	color: #ffffff;
+	text-align: center;
+	transition: all 0.2s;
+	cursor: pointer;
+}
+.money-operations > .withdraw:hover {
+	color: #ffffff;
+	background-color: #010038;
+}
+
+.btn-container {
+	margin-left: -10px;
+}
+
+.btn-container > .del {
+	background-color: #6381b2;
+	color: #ffffff;
+}
+
+.btn-container > .del:hover {
+	background-color: #e25858;
+	color: #ffffff;
 }

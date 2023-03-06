@@ -23,9 +23,9 @@ function App() {
 	return (
 		<div className='App'>
 			<header className='App-header'>
+				<AccountSummary accounts={account} />
 				<AddNewAccount addAccount={accountHandler} />
 				<AccountList accounts={account} setAccount={setAccount} />
-				<AccountSummary accounts={account} />
 			</header>
 		</div>
 	);
