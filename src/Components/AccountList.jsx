@@ -36,7 +36,7 @@ function AccountList({ accounts, setAccount }) {
 		if (+enteredSum >= 0 || !e.target.value) {
 			let updatedMoney = accounts.map((acc) =>
 				acc.id === +e.target.id
-					? { ...acc, enteredAmount: enteredSum }
+					? { ...acc, enteredAmount: +(+enteredSum).toFixed(2) }
 					: acc
 			);
 			setAccount(updatedMoney);
@@ -48,7 +48,7 @@ function AccountList({ accounts, setAccount }) {
 			acc.id === id
 				? {
 						...acc,
-						sum: acc.sum + +acc.enteredAmount,
+						sum: +(acc.sum + +acc.enteredAmount).toFixed(2),
 						enteredAmount: '',
 				  }
 				: acc
@@ -64,7 +64,7 @@ function AccountList({ accounts, setAccount }) {
 				acc.id === id
 					? {
 							...acc,
-							sum: acc.sum - +acc.enteredAmount,
+							sum: +(acc.sum - +acc.enteredAmount).toFixed(2),
 							enteredAmount: '',
 					  }
 					: acc
