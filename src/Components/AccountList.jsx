@@ -5,7 +5,7 @@ function AccountList({ accounts, setAccount }) {
 	const [showModal, setShowModal] = useState({
 		state: 'hidden',
 		message: null,
-	}); // ant css padaryti display hiddem arba show
+	});
 
 	const deleteHandler = (id) => {
 		const accunt = accounts.filter((acc) => acc.id === id);
@@ -17,7 +17,7 @@ function AccountList({ accounts, setAccount }) {
 					state: 'hidden',
 					message: '',
 				});
-			}, 2000);
+			}, 3000);
 		} else {
 			setAccount((prevState) => prevState.filter((acc) => acc.id !== id));
 			setShowModal({ state: 'visible', message: 'Account is deleted' });
@@ -102,7 +102,7 @@ function AccountList({ accounts, setAccount }) {
 					>
 						<option value='All'>All</option>
 						<option value='withMoney'>Active</option>
-						<option value='noMoney'>No Money</option>
+						<option value='noMoney'>Not Active</option>
 					</select>
 				</div>
 			</div>
